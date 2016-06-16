@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.example.chsan_000.xmlparsingdemo">
+
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
+
+
+    <application
+        android:allowBackup="true"
+        android:icon="@drawable/icon"
+        android:label="@string/app_name"
+        android:supportsRtl="true"
+        android:theme="@style/AppTheme">
+        <meta-data
+            android:name="com.google.android.geo.API_KEY"
+            android:value="AIzaSyD9FmOfu5cLte51nwdssT3ncUshANJVd0k" />
+
+        <activity android:name=".MyAds">
+
+        </activity>
+
+        <activity android:name=".MainActivity">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+
+        <activity
+            android:name="com.example.chsan_000.database.ShowHistory"
+            android:parentActivityName=".MainActivity"></activity>
+
+        <activity
+            android:name=".SerachByPlaceActivity"
+            android:parentActivityName=".MainActivity"></activity>
+
+        <activity
+            android:name=".Mylocation"
+            android:parentActivityName=".MainActivity"></activity>
+
+        <activity
+            android:name="com.example.chsan_000.database.MyShowHistory"
+            android:parentActivityName=".MainActivity" />
+
+        <activity
+            android:name=".TimeZoneActivity"
+            android:parentActivityName=".MainActivity"></activity>
+
+    </application>
+
+</manifest>
