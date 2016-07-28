@@ -16,11 +16,11 @@ public class DbOpenHelper extends SQLiteOpenHelper {
     public static final String DATABASE_NAME = "postcode.db";
     public static final String TABLE_NAME = "postcodehistory";
 
-    private String CREATE_TABLE = String.format("create table %s (name TEXT);", TABLE_NAME);
+    private String CREATE_TABLE = String.format("create table %s (name TEXT primary key);", TABLE_NAME);
     public static String DELETE_TABLE = String.format("delete from ", TABLE_NAME);
 
     public DbOpenHelper(Context context) {
-        super(context, DATABASE_NAME, null, 2);
+        super(context, DATABASE_NAME, null, 3);
     }
 
     @Override
@@ -58,6 +58,6 @@ public class DbOpenHelper extends SQLiteOpenHelper {
     public void deleteContact() {
         SQLiteDatabase db = this.getWritableDatabase();
         db.execSQL("delete from " + TABLE_NAME);
-       // db.close();
+        // db.close();
     }
 }

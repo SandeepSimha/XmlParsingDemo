@@ -16,7 +16,6 @@ import java.util.List;
  * Created by chsan_000 on 6/9/2016.
  */
 public class ZipCodeAsync extends AsyncTask<String, Integer, List<PostPojo>> {
-
     Context context;
     MyHistoryAdapter adapter;
     ProgressBar progressBar;
@@ -36,63 +35,33 @@ public class ZipCodeAsync extends AsyncTask<String, Integer, List<PostPojo>> {
 
     @Override
     protected List<PostPojo> doInBackground(String... params) {
-//        try {
-//            Thread.sleep(1000);
-//
-//        } catch (Exception e) {
-//            e.printStackTrace();
-//        }
-
         String value = params[0];
         Log.e("DatabaseSync", "doInBackGroung: parametrr - " + value);
-
-
         //return getEmployeeRecords();
         List<PostPojo> zipList = new ArrayList<>();
-
         // fill the list using database
         DbOpenHelper dbOpenHelper = new DbOpenHelper(context);
         SQLiteDatabase db = dbOpenHelper.getWritableDatabase();
         Cursor cursor = db.rawQuery("select * from " + DbOpenHelper.TABLE_NAME, null);// query//it returns cursor
-
-
         //
         int progress = 0;
         if (cursor.moveToFirst()) {
-
-
             if (cursor.getCount() <= 0 || cursor == null) {
                 Toast.makeText(context, "No records yet!", Toast.LENGTH_SHORT).show();
-            }
-
-            else {
-
-
+            } else {
                 do {
                     progress++;
                     int idIndex = cursor.getColumnIndex("name");
                     String id = cursor.getString(idIndex);
-
-
                     PostPojo emp = new PostPojo();
-
                     emp.setName(id);
-
                     // add to list
-
                     zipList.add(emp);
-
                     //to knw how many resordds
                     publishProgress(progress);
-
-
                 } while (cursor.moveToNext());
             }
-
-
         }
-
-
         return zipList;
     }
 

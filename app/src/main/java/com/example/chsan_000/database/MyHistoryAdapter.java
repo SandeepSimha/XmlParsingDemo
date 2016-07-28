@@ -18,9 +18,12 @@ import java.util.List;
 public class MyHistoryAdapter extends RecyclerView.Adapter<MyHistoryAdapter.MyViewHolder> {
     private List<PostPojo> zipList;
     Context mContext;
+    int resource;
 
-    public MyHistoryAdapter(List<PostPojo> list) {
-        zipList = list;
+    public MyHistoryAdapter(List<PostPojo> zipList, int resource, Context mContext) {
+        this.mContext = mContext;
+        this.zipList = zipList;
+        this.resource = resource;
     }
 
     public void addZip(List<PostPojo> empployeeList) {
@@ -28,8 +31,8 @@ public class MyHistoryAdapter extends RecyclerView.Adapter<MyHistoryAdapter.MyVi
         notifyDataSetChanged();// refresh adapter after modifying the list
     }
 
-    public class MyViewHolder extends RecyclerView.ViewHolder {
-        public TextView name;
+    public static class MyViewHolder extends RecyclerView.ViewHolder {
+        TextView name;
 
         public MyViewHolder(View itemView) {
             super(itemView);
@@ -40,16 +43,13 @@ public class MyHistoryAdapter extends RecyclerView.Adapter<MyHistoryAdapter.MyVi
 
     @Override
     public MyViewHolder onCreateViewHolder(ViewGroup parent, int viewType) {
-
         View itemView = LayoutInflater.from(parent.getContext()).inflate(R.layout.history_activity, parent, false);
         return new MyViewHolder(itemView);
     }
 
     @Override
     public void onBindViewHolder(MyViewHolder holder, int position) {
-        PostPojo employee = zipList.get(position);
-
-        holder.name.setText(employee.getName());
+        holder.name.setText(zipList.get(position).getName());
     }
 
     @Override

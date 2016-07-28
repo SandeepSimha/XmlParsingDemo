@@ -5,7 +5,7 @@ package com.example.chsan_000.database;
  */
 public class PostPojo {
 
-       private String name;
+    private String name;
 
     public String getName() {
         return name;
