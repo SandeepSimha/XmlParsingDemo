@@ -1,4 +1,4 @@
-package com.example.chsan_000.database;
+package com.company.sandeep.database;
 
 /**
  * Created by chsan_000 on 6/6/2016.

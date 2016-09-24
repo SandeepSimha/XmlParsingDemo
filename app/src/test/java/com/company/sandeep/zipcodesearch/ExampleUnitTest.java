@@ -1,4 +1,4 @@
-package com.example.chsan_000.xmlparsingdemo;
+package com.company.sandeep.zipcodesearch;
 
 import org.junit.Test;
 

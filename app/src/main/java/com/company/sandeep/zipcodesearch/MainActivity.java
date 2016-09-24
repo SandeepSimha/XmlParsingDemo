@@ -1,7 +1,5 @@
-package com.example.chsan_000.xmlparsingdemo;
+package com.company.sandeep.zipcodesearch;
 
-import android.content.ClipData;
-import android.content.ClipboardManager;
 import android.content.Context;
 import android.content.DialogInterface;
 import android.content.Intent;
@@ -22,17 +20,17 @@ import android.widget.Button;
 import android.widget.EditText;
 import android.widget.ListView;
 import android.widget.ProgressBar;
-import android.widget.TextView;
-import android.widget.Toast;
 
-import com.example.chsan_000.database.DbOpenHelper;
-import com.example.chsan_000.database.MyShowHistory;
-import com.example.chsan_000.pojo.MyResponse;
-import com.example.chsan_000.pojo.Postalcodes;
+import com.crashlytics.android.Crashlytics;
+import com.company.sandeep.database.DbOpenHelper;
+import com.company.sandeep.database.MyShowHistory;
+import com.company.sandeep.pojo.MyResponse;
+import com.company.sandeep.pojo.Postalcodes;
 
 import java.util.ArrayList;
 import java.util.List;
 
+import io.fabric.sdk.android.Fabric;
 import retrofit.Callback;
 import retrofit.RetrofitError;
 import retrofit.client.Response;
@@ -56,6 +54,7 @@ public class MainActivity extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+        Fabric.with(this, new Crashlytics());
         setContentView(R.layout.activity_main);
 
         button = (Button) findViewById(R.id.search);
@@ -140,7 +139,7 @@ public class MainActivity extends AppCompatActivity {
                     listView.setOnItemClickListener(new AdapterView.OnItemClickListener() {
                         @Override
                         public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
-                            Snackbar snackbar = Snackbar.make(listView, "Press Long to get More Options", Snackbar.LENGTH_LONG);
+                            Snackbar snackbar = Snackbar.make(listView, "Click on Right side Buttons!", Snackbar.LENGTH_LONG);
                             snackbar.show();
                         }
                     });
@@ -282,9 +281,7 @@ public class MainActivity extends AppCompatActivity {
             builder.setTitle("About");
             builder.setIcon(R.drawable.about);
 
-            builder.setMessage(
-                    "My name is Sandeep Cherukuri. I am from California, USA." +
-                            " This is my first application in android. " +
+            builder.setMessage("Please share this app to your friends."+
                             "The data is not purely accursed");
 
 

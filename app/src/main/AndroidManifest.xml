@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
-    package="com.example.chsan_000.xmlparsingdemo">
+    package="com.company.sandeep.zipcodesearch">
 
     <uses-permission android:name="android.permission.INTERNET" />
     <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
@@ -21,9 +21,12 @@
         <meta-data
             android:name="com.google.android.gms.version"
             android:value="@integer/google_play_services_version" />
+        <meta-data
+            android:name="io.fabric.ApiKey"
+            android:value="7f1add120f35dc90cea9d66f058f4fa646ac87c9" />
 
         <activity
-            android:name=".MainActivity"
+            android:name="com.company.sandeep.zipcodesearch.MainActivity"
             android:configChanges="keyboardHidden|screenLayout|screenSize|locale|orientation">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
@@ -33,16 +36,16 @@
 
 
         <activity
-            android:name=".Mylocation"
-            android:parentActivityName=".MainActivity"></activity>
+            android:name="com.company.sandeep.zipcodesearch.Mylocation"
+            android:parentActivityName="com.company.sandeep.zipcodesearch.MainActivity"></activity>
 
         <activity
-            android:name="com.example.chsan_000.database.MyShowHistory"
-            android:parentActivityName=".MainActivity" />
+            android:name="com.company.sandeep.database.MyShowHistory"
+            android:parentActivityName="com.company.sandeep.zipcodesearch.MainActivity" />
 
         <activity
-            android:name=".TimeZoneActivity"
-            android:parentActivityName=".MainActivity"></activity>
+            android:name="com.company.sandeep.zipcodesearch.TimeZoneActivity"
+            android:parentActivityName="com.company.sandeep.zipcodesearch.MainActivity"></activity>
 
     </application>
 

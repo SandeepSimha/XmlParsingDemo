@@ -1,4 +1,4 @@
-package com.example.chsan_000.pojo;
+package com.company.sandeep.pojo;
 
 import java.util.List;
 

@@ -1,4 +1,4 @@
-package com.example.chsan_000.xmlparsingdemo;
+package com.company.sandeep.zipcodesearch;
 
 import android.Manifest;
 import android.content.pm.PackageManager;
@@ -49,6 +49,8 @@ public class Mylocation extends AppCompatActivity implements OnMapReadyCallback 
         LatLng sydney = new LatLng(lang, lat);
         mMap.addMarker(new MarkerOptions().position(sydney).title("Marker in " + placename));
         mMap.moveCamera(CameraUpdateFactory.newLatLng(sydney));
+
+        mMap.getUiSettings().setZoomControlsEnabled(true);
 
         if (ContextCompat.checkSelfPermission(this, Manifest.permission.ACCESS_FINE_LOCATION)
                 == PackageManager.PERMISSION_GRANTED) {

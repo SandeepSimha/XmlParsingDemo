@@ -1,4 +1,4 @@
-package com.example.chsan_000.database;
+package com.company.sandeep.database;
 
 import android.content.Context;
 import android.database.Cursor;

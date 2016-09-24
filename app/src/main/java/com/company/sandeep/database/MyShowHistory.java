@@ -1,4 +1,4 @@
-package com.example.chsan_000.database;
+package com.company.sandeep.database;
 
 import android.database.sqlite.SQLiteDatabase;
 import android.os.Bundle;
@@ -11,7 +11,7 @@ import android.view.MenuItem;
 import android.widget.ProgressBar;
 import android.widget.Toast;
 
-import com.example.chsan_000.xmlparsingdemo.R;
+import com.company.sandeep.zipcodesearch.R;
 
 import java.util.ArrayList;
 import java.util.List;

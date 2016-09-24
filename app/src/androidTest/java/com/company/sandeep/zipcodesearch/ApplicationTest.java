@@ -1,4 +1,4 @@
-package com.example.chsan_000.xmlparsingdemo;
+package com.company.sandeep.zipcodesearch;
 
 import android.app.Application;
 import android.test.ApplicationTestCase;

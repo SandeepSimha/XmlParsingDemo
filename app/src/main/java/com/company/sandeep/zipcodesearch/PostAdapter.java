@@ -1,4 +1,4 @@
-package com.example.chsan_000.xmlparsingdemo;
+package com.company.sandeep.zipcodesearch;
 
 import android.app.Activity;
 import android.content.ClipData;
@@ -13,7 +13,7 @@ import android.widget.ImageView;
 import android.widget.TextView;
 import android.widget.Toast;
 
-import com.example.chsan_000.pojo.Postalcodes;
+import com.company.sandeep.pojo.Postalcodes;
 
 import java.util.ArrayList;
 import java.util.List;

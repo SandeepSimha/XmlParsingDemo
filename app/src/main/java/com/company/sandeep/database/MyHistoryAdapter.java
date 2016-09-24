@@ -1,4 +1,4 @@
-package com.example.chsan_000.database;
+package com.company.sandeep.database;
 
 import android.content.Context;
 import android.support.v7.widget.RecyclerView;
@@ -7,7 +7,7 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.TextView;
 
-import com.example.chsan_000.xmlparsingdemo.R;
+import com.company.sandeep.zipcodesearch.R;
 
 import java.util.ArrayList;
 import java.util.List;

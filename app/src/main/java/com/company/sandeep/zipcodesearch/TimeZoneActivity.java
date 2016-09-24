@@ -1,4 +1,4 @@
-package com.example.chsan_000.xmlparsingdemo;
+package com.company.sandeep.zipcodesearch;
 
 import android.os.Bundle;
 import android.support.annotation.Nullable;
@@ -8,7 +8,7 @@ import android.util.Log;
 import android.widget.TextView;
 import android.widget.Toast;
 
-import com.example.chsan_000.pojo.Timezone;
+import com.company.sandeep.pojo.Timezone;
 
 import retrofit.Callback;
 import retrofit.RetrofitError;

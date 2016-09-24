@@ -6,6 +6,7 @@
 #
 # For more details, see
 #   http://developer.android.com/guide/developing/tools/proguard.html
+-dontwarn org.apache.lang.**
 
 # Add any project specific keep options here:
 

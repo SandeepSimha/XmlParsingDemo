@@ -1,4 +1,4 @@
-package com.example.chsan_000.pojo;
+package com.company.sandeep.pojo;
 
 public class Timezone {
     private String time;

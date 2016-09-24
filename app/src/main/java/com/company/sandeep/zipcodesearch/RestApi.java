@@ -1,10 +1,7 @@
-package com.example.chsan_000.xmlparsingdemo;
+package com.company.sandeep.zipcodesearch;
 
-import com.example.chsan_000.pojo.MyResponse;
-import com.example.chsan_000.pojo.Postalcodes;
-import com.example.chsan_000.pojo.Timezone;
-
-import java.util.List;
+import com.company.sandeep.pojo.MyResponse;
+import com.company.sandeep.pojo.Timezone;
 
 import retrofit.Callback;
 import retrofit.RestAdapter;
